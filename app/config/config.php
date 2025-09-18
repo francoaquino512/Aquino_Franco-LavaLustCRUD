@@ -79,7 +79,7 @@ $config['ENVIRONMENT']             = 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] 				= 'https://aquino-franco12-lavalustcrud.onrender.com/';
+$config['base_url'] 				= 'http://localhost:4000/';
 
 /*
 |--------------------------------------------------------------------------
