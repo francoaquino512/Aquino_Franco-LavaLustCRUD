@@ -1,221 +1,99 @@
+ body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #0f1923; /* Valorant dark bg */
+      color: #fff;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(
-      rgba(18, 18, 30, 0.9),
-      rgba(18, 18, 30, 0.9)
-    ),
-    url('valorant.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 40px 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  color: #eaeaea;
-  transition: all 0.4s ease-in-out;
-}
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #ff4655; /* Valorant red */
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-.search-container {
-  position: absolute;
-  top: 20px;
-  right: 90px;
-  z-index: 999;
-}
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      background: #1b2735;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-  background: rgba(30, 30, 50, 0.6);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 211, 105, 0.2);
-}
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+    }
 
-.pagination a,
-.pagination span {
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: linear-gradient(to right, #4a90e2, #9b59b6);
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
+    th {
+      background: #111820;
+      color: #ff4655;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-.pagination a:hover {
-  background: linear-gradient(to right, #6dd5fa, #d664c0);
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 211, 105, 0.3);
-}
+    tr:nth-child(even) {
+      background: #16212d;
+    }
 
-.pagination .active {
-  background: #ffd369;
-  color: #1e1e2e;
-  box-shadow: 0 0 10px #ffd369;
-  cursor: default;
-  pointer-events: none;
-}
+    tr:hover {
+      background: rgba(255, 70, 85, 0.1);
+    }
 
-h1 {
-  font-size: 40px;
-  margin-bottom: 10px; 
-  color: #ffd369;
-  text-align: center;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  transition: all 0.3s ease;
-}
+    td {
+      font-size: 0.9rem;
+      color: #e5e5e5;
+    }
 
- h3 {
-  color: #ffd369; 
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  text-align: center;
-  margin: 10px 0 20px;
-  transition: all 0.3s ease;
-}
+    a {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
 
+    a[href*="update"] {
+      background: #3b82f6; /* Blue for Update */
+      color: #fff;
+    }
 
-form {
-  background-color: rgba(45, 50, 70, 0.85);
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  transition: box-shadow 0.4s ease;
-}
+    a[href*="update"]:hover {
+      background: #2563eb;
+    }
 
-form:hover {
-  box-shadow: 0 10px 25px rgba(255, 214, 105, 0.3);
-}
+    a[href*="soft-delete"] {
+      background: #ff4655; /* Valorant red for Delete */
+      color: #fff;
+    }
 
+    a[href*="soft-delete"]:hover {
+      background: #e63946;
+    }
 
-label {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px 0 5px;
-  color: #c0cfff;
-}
+    a[href*="create"] {
+      margin-top: 20px;
+      background: #10b981; /* Teal for Create */
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
 
-input[type="text"],
-input[type="email"] {
-  padding: 10px;
-  border: 1px solid #666;
-  background-color: #222;
-  color: #eee;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-input::placeholder {
-  color: #999;
-}
-
-input:focus {
-  outline: none;
-  border-color: #ffd369;
-  box-shadow: 0 0 6px rgba(255, 211, 105, 0.5);
-}
-
-
-button[type="submit"],
-a[href*="create"] {
-  background: linear-gradient(to right, #4a90e2, #9b59b6);
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 15px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-button[type="submit"]:hover,
-a[href*="create"]:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #6dd5fa, #d664c0);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-}
-
-
-table {
-  border-collapse: collapse;
-  width: 90%;
-  max-width: 1000px;
-  background-color: rgba(40, 45, 65, 0.88);
-  color: #f2f2f2;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 40px 0;
-  animation: fadeIn 0.8s ease-in-out;
-  transition: all 0.3s ease;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-th {
-  background-color: #5865f2; 
-  color: #fff;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-}
-
-tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.03);
-}
-
-tr:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  transition: background-color 0.3s ease;
-}
-
-
-a {
-  display: inline-block;
-  margin: 5px;
-  text-decoration: none;
-  color: #84dfff;
-  font-weight: bold;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-a:hover {
-  color: #ffd369;
-  text-shadow: 0 0 5px #ffd369;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-
+    a[href*="create"]:hover {
+      background: #059669;
+    }

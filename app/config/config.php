@@ -90,7 +90,7 @@ $config['base_url'] 				= 'https://aquino-franco12-lavalustcrud.onrender.com/';
 | variable to blank.
 |
 */
-$config['index_page']               = '';
+$config['index_page']               = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -212,7 +212,7 @@ $config['language'] 				= 'en-US';
 $config['sess_driver']             = 'file';
 $config['sess_cookie_name']        = 'LLSession';
 $config['sess_expiration']         = 7200;
-$config['sess_save_path']          = '';
+$config['sess_save_path']          = '/tmp';
 $config['sess_match_ip']           = TRUE;
 $config['sess_match_fingerprint']  = TRUE;
 $config['sess_time_to_update']     = 300;
