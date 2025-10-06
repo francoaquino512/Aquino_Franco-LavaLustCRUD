@@ -107,7 +107,7 @@ input[type="submit"]:hover {
       <option value="duelists">Duelists</option>
       <option value="initiators">Initiators</option>
       <option value="sentinels">Sentinels</option>
-      <option value="multi">Multi-Role</option>
+      <option value="multi-role">Multi-Role</option>
     </select>
 
     <input type="submit" value="Submit">
